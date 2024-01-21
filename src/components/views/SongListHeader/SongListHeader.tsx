@@ -1,15 +1,22 @@
 import React from 'react'
+import './SongListHeader.css';
 
 const SongListHeader = (): JSX.Element => {
   return (
     <div
-      style={{ display: 'flex', marginTop: '20px', backgroundColor: 'gray' }}
+      className='song-list-header'
     >
-      <div></div>
-      <div>Song Name</div>
-      <div>Artist Name</div>
-      <div>Track</div>
-      <div></div>
+      <div className='songListHeader-block empty-div-one'></div>
+      <div className='songListHeader-block'>
+        <p>Song Name</p>
+      </div>
+      <div className='songListHeader-block'>
+        <p>Artist Name</p>
+      </div>
+      <div className='songListHeader-block'>
+        <p>Track</p>
+      </div>
+      <div className='songListHeader-block empty-div-two'></div>
     </div>
   )
 }

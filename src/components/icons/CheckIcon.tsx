@@ -1,7 +1,7 @@
 import React from 'react'
 import { type IconProps } from '../../Interfaces/IIcon'
 
-const PlusIcon: React.FC<IconProps> = ({ className }): JSX.Element => {
+const CheckIcon:React.FC<IconProps> = ({className}): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,11 +9,11 @@ const PlusIcon: React.FC<IconProps> = ({ className }): JSX.Element => {
       height="24"
       viewBox="0 0 24 24"
       className={className}
-      // style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"
+    //   style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"
     >
-      <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path>
+      <path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path>
     </svg>
   )
 }
 
-export default PlusIcon
+export default CheckIcon

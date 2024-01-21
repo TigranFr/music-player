@@ -1,9 +1,23 @@
 import React from 'react'
-import { PlusIcon } from '../../icons'
+import { toast } from 'react-toastify'
+import { PlayIcon } from '../../icons'
 import { CustomButton } from '../../shared'
 
 const PlayAllButton = (): JSX.Element => {
-  return <CustomButton title="Play All" startIcon={<PlusIcon className="icon" />}/>
+
+  const handleAddClick = (): void => {
+    toast('Successfully played, open console')
+    console.log('Successfully played');
+  }
+
+  return (
+    <CustomButton 
+      title="Play All" 
+      startIcon={<PlayIcon className="icon" />} 
+      onClick={handleAddClick}
+    />
+
+  )
 }
 
 export default PlayAllButton

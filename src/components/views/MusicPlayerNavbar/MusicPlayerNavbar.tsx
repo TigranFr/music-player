@@ -1,20 +1,24 @@
-import React, { useEffect } from 'react'
-import { CustomButton } from '../../shared'
-import AddAllButton from '../AddAllButton/AddAllButton'
-import PlayAllButton from '../PlayAllButton/PlayAllButton'
-
+import React from 'react'
+import { AddAllButton, PlayAllButton, TrachNumberButton } from '..'
+import { SearchIcon } from '../../icons'
 import './MusicPlayerNavbar.css'
 
 const MusicPlayerNavbar = (): JSX.Element => {
-  useEffect(() => {
-    console.log('heeeeeeeeeey')
-  }, [])
+
   return (
-    <div style={{ display: 'flex', backgroundColor: 'gray' }}>
-      <PlayAllButton />
-      <AddAllButton />
-      <CustomButton title="Trach Num..." />
-      <input type="search" placeholder="Filter" />
+    <div className="MusicPlayerHeader">
+      <div className="HeaderWrapperOne">
+        <PlayAllButton />
+        <AddAllButton />
+      </div>
+      <div className="HeaderWrapperTwo">
+        <TrachNumberButton/>
+        <form className="filterForm">
+          <SearchIcon className= "icon"/>
+          <input type="text" placeholder="Filter" />
+        </form>
+      </div>
+    
     </div>
   )
 }

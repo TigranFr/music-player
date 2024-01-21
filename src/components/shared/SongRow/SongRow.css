@@ -1,0 +1,32 @@
+.song-row {
+    display: grid;
+    grid-template-columns: 5% 40% 30% 10% auto;
+    gap: 3px;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    transition: background-color 0.3s; /* Add transition for a smooth effect */
+  }
+  
+  .song-row:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Change background color on hover */
+  }
+  
+  .icons-block-one,
+  .icons-block-two {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icons-block-two {
+    justify-content: space-around;
+  }
+  
+  .song-row-item {
+    padding: 0 4%;
+  }
+  
+  .song-row-item p {
+    font-size: 20px;
+  }
+  

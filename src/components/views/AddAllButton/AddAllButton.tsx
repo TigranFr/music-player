@@ -1,17 +1,15 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { PlusIcon } from '../../icons'
 import { CustomButton } from '../../shared'
 import { toast } from 'react-toastify'
 
 const AddAllButton = (): JSX.Element => {
+
   const handleAddClick = (): void => {
     toast('Successfully added, open console')
-    console.log('Success')
+    console.log('Successfully added')
   }
 
-  useEffect(() => {
-    console.log('rendereee')
-  }, [])
   return (
     <CustomButton
       onClick={handleAddClick}

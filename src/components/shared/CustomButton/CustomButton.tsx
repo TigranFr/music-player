@@ -16,13 +16,13 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   title,
 }) => {
   return (
-    <div>
+    <div className="custom-button-wrapper">
       <button className={`custom-button ${className}`} onClick={onClick}>
         {startIcon !== null && <div className="start-icon">{startIcon}</div>}
-        {title}
+        {title !== null && <p className="button-title">{title}</p>}
       </button>
-      <div>
-        <ArrowDownIcon />
+      <div className="arrow-down">
+        <ArrowDownIcon className = "icon" />
       </div>
     </div>
   )
