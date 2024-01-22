@@ -32,8 +32,8 @@ describe('CustomButton Component', () => {
 
   // Test Case 4: Applies additional className to the button
   test('applies additional className to the button', () => {
-    render(<CustomButton className="custom-class" title="Click me" />);
+    render(<CustomButton className="button-title" title="Click me" />);
     const buttonElement = screen.getByText('Click me');
-    expect(buttonElement).toHaveClass('custom-class');
+    expect(buttonElement).toHaveClass("button-title");
   });
 });

@@ -7,7 +7,7 @@ const SongListHeader = (): JSX.Element => {
       className='song-list-header'
     >
       <div className='songListHeader-block empty-div-one'></div>
-      <div className='songListHeader-block'>
+      <div id="div1" className='songListHeader-block'>
         <p>Song Name</p>
       </div>
       <div className='songListHeader-block'>

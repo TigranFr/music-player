@@ -10,10 +10,10 @@ import {
 function App(): JSX.Element {
   return (
     <div className="App">
-      <MusicPlayerNavbar />
-      <SongListHeader />
-      <SongList />
-      <MusicUploadForm />
+      <MusicPlayerNavbar data-testid="music-player-navbar"/>
+      <SongListHeader data-testid="song-list-header" />
+      <SongList data-testid="song-list" />
+      <MusicUploadForm data-testid="music-upload-form" />
     </div>
   )
 }

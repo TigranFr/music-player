@@ -12,7 +12,7 @@ const mockSong = {
   trackNumber: 1,
 }
 
-// Test Suite for SongRow
+// Test Suite for SongRowa
 describe('SongRow Component', () => {
   // Test Case 1: Renders the component with song details
   test('renders component with song details', () => {

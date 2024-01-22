@@ -4,7 +4,7 @@ import { SongRow } from '../../shared'
 import './SongList.css'
 
 const SongList = (): JSX.Element => {
-  const songs = useAppSelector((state) => state.songList.songs)
+  const songs = useAppSelector(state => state.songList.songs)
   return (
     <div className="songList">
       {songs.map((song, index) => (

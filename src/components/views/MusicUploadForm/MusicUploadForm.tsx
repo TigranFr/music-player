@@ -72,7 +72,6 @@ const MusicUploadForm: React.FC = () => {
         accept=".mp3, .wav"
         onChange={handleFileChange}
         className="file-input"
-        id="file-input"
       />
       {selectedFile !== null && (
         <div className="selected-file">Selected File: {selectedFile.name}</div>
