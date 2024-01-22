@@ -1,54 +1,89 @@
 .custom-button-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid gray;
-    border-radius: 5px;
-    margin-left: 10px;
-    padding-left: 6px;
-    background-color: rgb(225, 225, 225);
-    height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: rgb(225, 225, 225);
+  height: 40px;
+  width: 50%;
+  padding-left: 5px;
+}
+
+.custom-button-wrapper .arrow-down {
+  display: flex;
+  align-items: center;
+  padding: 0 10px; /* Adjusted padding for better spacing */
+}
+
+.custom-button-wrapper .arrow-down .icon {
+  width: 15px;
+}
+
+.custom-button-wrapper .custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: rgb(225, 225, 225);
+  height: 100%;
+  min-width: 120px; /* Adjusted minimum width */
+  padding: 0 10px;
+  border-right: 1px solid gray;
+}
+
+.custom-button-wrapper .custom-button .button-title {
+  font-size: 16px; /* Adjusted font size for better visual balance */
+}
+
+.custom-button-wrapper .third {
+  flex-grow: 1;
+  border-right: none;
+  padding-right: 0;
+}
+
+.custom-button-wrapper .custom-button .start-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px; /* Adjusted margin for better spacing */
+}
+
+@media only screen and (max-width: 1024px) {
+  /* Add your responsive styles for max-width: 1024px here */
+}
+
+@media only screen and (max-width: 768px) {
+  .custom-button-wrapper{
+    width: 80%;
+  }
+  .custom-button-wrapper .custom-button{
+    width: 100%;
+  }
+  .custom-button-wrapper .custom-button .button-title{
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width:465px){
+  .custom-button-wrapper .custom-button .button-title{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .custom-button-wrapper{
+    width: 150%;
   }
   
-  .custom-button-wrapper .arrow-down {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 0 10px; /* Added padding for better spacing */
-  }
-  
-  .custom-button-wrapper .arrow-down .icon {
-    width: 15px;
-  }
-  
-  .custom-button-wrapper .custom-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    outline: none;
-    background-color: rgb(225, 225, 225);
-    height: 100%;
-    min-width: 140px;
-    padding: 0 10px;
-    border-right: 1px solid gray;
-  }
-  
-  .custom-button-wrapper .custom-button .button-title {
-    font-size: 20px;
-  }
-  
-  .custom-button-wrapper .third {
-    flex-grow: 1; 
-    border-right: none;
-    padding-right: 0;
-  }
-  
-  .custom-button-wrapper .custom-button .start-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 3px;
-  }
-  
+}
+
+@media only screen and (max-width: 375px) {
+  /* Add your responsive styles for max-width: 375px here */
+}
+
+@media only screen and (max-width: 320px) {
+  /* Add your responsive styles for max-width: 320px here */
+}

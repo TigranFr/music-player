@@ -21,6 +21,5 @@ const uploadFormSlice = createSlice({
   },
 })
 
-export const { setFile, setUploadInProgress, setUploadError } =
-  uploadFormSlice.actions
+export const { setFile, setUploadInProgress, setUploadError } = uploadFormSlice.actions
 export default uploadFormSlice.reducer

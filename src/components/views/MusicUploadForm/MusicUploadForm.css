@@ -1,14 +1,14 @@
 .music-upload-form {
     max-width: 1060px;
-    width: 100%;
-    margin: 20px auto;
     padding: 20px;
+    width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    margin: 20px auto;
   }
   
   .file-input {
@@ -47,12 +47,12 @@
   }
   
   .loader {
-    border: 8px solid rgba(0, 0, 0, 0.2); /* Light gray border */
-    border-top: 8px solid #000; /* Black border on top */
+    border: 8px solid rgba(0, 0, 0, 0.2); 
+    border-top: 8px solid #000; 
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    animation: spin 1s linear infinite; /* Adjust the animation speed as needed */
+    animation: spin 1s linear infinite; 
   }
   
   @keyframes spin {
@@ -60,3 +60,49 @@
     100% { transform: rotate(360deg); }
   }
   
+
+  @media only screen and (max-width:1150px){
+    .music-upload-form{
+      width: 90%;
+    }
+  }
+  
+@media only screen and (max-width:1024px){
+  .music-upload-form{
+    width: 90%;
+  }
+  
+}
+
+@media only screen and (max-width:768px){
+  .music-upload-form{
+    flex-direction: column;
+  }
+  .file-input{
+    border-radius: 3px;
+    width: 100%;
+  }
+  .upload-button{
+    width: 100%;
+  }
+  .music-upload-form{
+    width:85%
+  }
+}
+
+@media only screen and (max-width:430px){
+  .music-upload-form{
+    width: 83%;
+  }
+}
+
+@media only screen and (max-width:375px){
+  .music-upload-form{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width:320px){
+
+}
+

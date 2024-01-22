@@ -29,7 +29,7 @@ const SongRow = ({ song }: SongRowProps): JSX.Element => {
       <div className='song-row-item'>
         <p>{song.artistName}</p>
       </div>
-      <div className='song-row-item'>
+      <div className='song-row-item trackNumber'>
         <p>{song.trackNumber}</p>
       </div>
       <div className='song-row-item icons-block-two'>
