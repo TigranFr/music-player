@@ -4,13 +4,11 @@ import { type IconProps } from '../../Interfaces/IIcon'
 const ShareIcon :React.FC<IconProps>= ({ className }): JSX.Element => {
 
     interface IStyles {
-        fill:string
         transform: string
         msFilter: string
     }
 
     const styles: IStyles = {
-        fill: 'rgba(0, 0, 0, 1)',
         transform: 'scaleX(-1)',
         msFilter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)'
       };

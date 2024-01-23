@@ -1,16 +1,16 @@
 import React from 'react';
 import { SortIcon } from '../../icons';
 import { CustomButton } from '../../shared';
-import './TrachNumberButton.css';
+import './TruckNumberButton.css';
 
-const TrachNumberButton = (): JSX.Element => {
+const TruckNumberButton = (): JSX.Element => {
   return (
     <CustomButton
       className="third"
-      title="Truck Num..."
+      title="Truck Number"
       startIcon={<SortIcon className="icon" />}
     />
   );
 };
 
-export default TrachNumberButton;
+export default TruckNumberButton;

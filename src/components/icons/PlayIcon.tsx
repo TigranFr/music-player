@@ -10,7 +10,6 @@ const PlayIcon:React.FC<IconProps> = ({className}): JSX.Element => {
       height="24"
       viewBox="0 0 24 24"
       className={className}
-      // style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"
     >
       <path d="M7 6v12l10-6z"></path>
     </svg>

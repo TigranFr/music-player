@@ -7,9 +7,9 @@ const SongList = (): JSX.Element => {
   const songs = useAppSelector(state => state.songList.songs)
   return (
     <div className="songList">
-      {songs.map((song, index) => (
+      {songs.length !== 0 ? songs.map((song, index) => (
         <SongRow key={index} song={song} />
-      ))}
+      )) : <h1>No results</h1>}
     </div>
   )
 }

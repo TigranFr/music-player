@@ -6,7 +6,13 @@ import { CustomButton } from '../../shared'
 const PlayAllButton = (): JSX.Element => {
 
   const handleAddClick = (): void => {
-    toast('Successfully played, open console')
+    toast.success('Successfully played, open console',{
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnFocusLoss: false,
+      pauseOnHover:false      
+    })
     console.log('Successfully played');
   }
 

@@ -6,7 +6,13 @@ import { toast } from 'react-toastify'
 const AddAllButton = (): JSX.Element => {
 
   const handleAddClick = (): void => {
-    toast('Successfully added, open console')
+    toast.success('Successfully added, open console' ,{
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnFocusLoss: false,
+      pauseOnHover:false      
+    })
     console.log('Successfully added')
   }
 

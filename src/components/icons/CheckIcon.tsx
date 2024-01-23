@@ -9,7 +9,6 @@ const CheckIcon:React.FC<IconProps> = ({className}): JSX.Element => {
       height="24"
       viewBox="0 0 24 24"
       className={className}
-    //   style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"
     >
       <path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path>
     </svg>

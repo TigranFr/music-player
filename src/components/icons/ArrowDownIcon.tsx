@@ -9,7 +9,6 @@ const ArrowDownIcon:React.FC<IconProps> = ({className}): JSX.Element => {
       height="24" 
       viewBox="0 0 24 24" 
       className={className}
-      // style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"
     >
         
       <path d="m11.998 17 7-8h-14z"></path>

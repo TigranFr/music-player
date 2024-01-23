@@ -20,8 +20,8 @@ const SongRow = ({ song }: SongRowProps): JSX.Element => {
       className="song-row"
     >
       <div className='song-row-item icons-block-one'>
-        <DetailedIcon />
-        <PlayIcon />
+        <DetailedIcon className='icon'/>
+        <PlayIcon className='icon'/>
       </div>
       <div className='song-row-item'>
         <p>{song.songName}</p>
@@ -33,10 +33,10 @@ const SongRow = ({ song }: SongRowProps): JSX.Element => {
         <p>{song.trackNumber}</p>
       </div>
       <div className='song-row-item icons-block-two'>
-        <HeartIcon />
-        <CheckIcon />
-        <ShareIcon />
-        <ArrowDownIcon />
+        <HeartIcon className='icon'/>
+        <CheckIcon className='icon'/>
+        <ShareIcon className='icon'/>
+        <ArrowDownIcon className='icon'/>
       </div>
     </div>
   )

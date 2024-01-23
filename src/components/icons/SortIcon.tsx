@@ -10,7 +10,6 @@ const SortIcon:React.FC<IconProps> = ({ className }): JSX.Element => {
       height="24"
       viewBox="0 0 24 24"
       className={className}
-    //   style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"
     >
       <path d="M8 16H4l6 6V2H8zm6-11v17h2V8h4l-6-6z"></path>
     </svg>

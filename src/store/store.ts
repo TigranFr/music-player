@@ -1,14 +1,14 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import songsListSlice from "./slices/songsListSlice";
-import uploadFormSlice from "./slices/uploadFormSlice";
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import songsListSlice from './slices/songsListSlice';
+import fetchedSongsSlice from './slices/fetchedSongsSlice';
 
 const reducer = combineReducers({
-    songList: songsListSlice,
-    uploadForm : uploadFormSlice
+  songList: songsListSlice,
+  fetchedSong: fetchedSongsSlice
 })
 
 export const store = configureStore({
-    reducer,
+  reducer,
 })
 
 export type RootState = ReturnType<typeof store.getState>
