@@ -1,31 +1,28 @@
-@import '../../variables.css';
+@import '../../../styles/variables.css';
 
 .custom-button-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--gray-color);
   border-radius: 5px;
   margin-left: 10px;
-  background-color: var(--button-background-color);
+  background-color: var(--gray-color-light);
   height: 40px;
-  transition: all 0.4s;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.5s;
+  transition: box-shadow 0.1s;
+  transition: transform 0.2s;
 }
 
 .custom-button-wrapper:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--gray-color-hover);
 }
 
-.custom-button-wrapper:active::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.2); /* Add a semi-transparent overlay */
+.custom-button-wrapper:active {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scale(1.01);
 }
 
 .custom-button-wrapper .arrow-down {
@@ -35,19 +32,14 @@
   cursor: pointer;
   width: 100%;
   height: 100%;
-  background-color: var(--button-background-color);
-  border-left: 1px solid var(--main-color);
+  background-color: var(--gray-color-light);
+  border-left: 1px solid var(--gray-color);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  transition: all 0.4s;
-}
-
-.custom-button-wrapper .third {
-  border-color: none;
 }
 
 .custom-button-wrapper .arrow-down:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--gray-color-hover);
 }
 
 .custom-button-wrapper .arrow-down .icon {
@@ -65,21 +57,16 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   outline: none;
-  background-color: var(--button-background-color);
+  background-color: var(--gray-color-light);
   height: 100%;
   max-width: 140px;
   padding: 0 10px;
   cursor: pointer;
-  transition: all 0.4s;
-  color: black;
+  color: var(--black-color);
 }
 
 .custom-button-wrapper .custom-button:hover {
-  background-color: var(--button-hover-color);
-}
-
-.custom-button-wrapper .custom-button:active {
-  transform: scale(0.98); /* Add a slight scale-down effect on click */
+  background-color: var(--gray-color-hover);
 }
 
 .custom-button-wrapper .custom-button .button-title {

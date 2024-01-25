@@ -16,27 +16,25 @@ interface SongRowProps {
 
 const SongRow = ({ song }: SongRowProps): JSX.Element => {
   return (
-    <div
-      className="song-row"
-    >
-      <div className='song-row-item icons-block-one'>
-        <DetailedIcon className='icon'/>
-        <PlayIcon className='icon'/>
+    <div className="song-row">
+      <div className="song-row-item icons-block-one">
+        <DetailedIcon className="icon" />
+        <PlayIcon className="icon" />
       </div>
-      <div className='song-row-item'>
-        <p>{song.songName}</p>
+      <div className="song-row-item song-name">
+        <p className="song-text">{song.songName}</p>
       </div>
-      <div className='song-row-item'>
-        <p>{song.artistName}</p>
+      <div className="song-row-item artist-name">
+        <p className="song-text">{song.artistName}</p>
       </div>
-      <div className='song-row-item trackNumber'>
-        <p>{song.trackNumber}</p>
+      <div className="song-row-item track-number">
+        <p className="song-text">{song.trackNumber}</p>
       </div>
-      <div className='song-row-item icons-block-two'>
-        <HeartIcon className='icon'/>
-        <CheckIcon className='icon'/>
-        <ShareIcon className='icon'/>
-        <ArrowDownIcon className='icon'/>
+      <div className="song-row-item icons-block-two">
+        <HeartIcon className="icon" />
+        <CheckIcon className="icon" />
+        <ShareIcon className="icon" />
+        <ArrowDownIcon className="icon" />
       </div>
     </div>
   )

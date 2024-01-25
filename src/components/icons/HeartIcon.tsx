@@ -1,7 +1,7 @@
 import React from 'react'
-import {type IconProps } from '../../Interfaces/IIcon';
+import { type IconProps } from '../../Interfaces/IIcon'
 
-const HeartIcon:React.FC<IconProps> = ({className}): JSX.Element => {
+const HeartIcon: React.FC<IconProps> = ({ className }): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,4 +15,4 @@ const HeartIcon:React.FC<IconProps> = ({className}): JSX.Element => {
   )
 }
 
-export default HeartIcon;
+export default HeartIcon

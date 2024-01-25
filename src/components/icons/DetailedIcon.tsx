@@ -1,7 +1,7 @@
 import React from 'react'
 import { type IconProps } from '../../Interfaces/IIcon'
 
-const DetailedIcon:React.FC<IconProps> = ({className}): JSX.Element => {
+const DetailedIcon: React.FC<IconProps> = ({ className }): JSX.Element => {
   return (
     <svg
       fill="#000000"

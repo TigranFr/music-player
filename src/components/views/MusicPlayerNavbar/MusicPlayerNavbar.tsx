@@ -1,36 +1,49 @@
-import React , {useState} from 'react'
+import React, { useState } from 'react'
 import { AddAllButton, PlayAllButton, TrachNumberButton } from '..'
 import { useAppDispatch, useAppSelector } from '../../../hooks/reduxHooks'
-import { setSongs } from '../../../store/slices/songsListSlice'
+import {
+  setSongs,
+  setFilteredSongs,
+} from '../../../store/slices/songsListSlice'
 import { SearchIcon } from '../../icons'
 import './MusicPlayerNavbar.css'
-import songs from '../../../utils/mockSongs';
 
 const MusicPlayerNavbar = (): JSX.Element => {
+  // State for the input value in the filter
+  const [inputValue, setInputValue] = useState<string>('')
 
-  const [inputValue , setInputValue] = useState<string>('');
-  const dispatch = useAppDispatch();
-  let songList = useAppSelector(state => state.songList.songs);
+  // Redux hooks for dispatch and selecting songs from the store
+  const dispatch = useAppDispatch()
+  const allSongs = useAppSelector((state) => state.songList.songs)
 
-  const handleOnChange = (event: React. ChangeEvent<HTMLInputElement>):void => {
-    setInputValue(event.target.value);
+  // Handle input change event to update the filter
+  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    const value = event.target.value
+    setInputValue(value)
+
+    if (value === '') {
+      // Reset filter and show all songs if input is empty
+      dispatch(setFilteredSongs(null))
+      dispatch(setSongs(allSongs))
+    } else {
+      // Filter songs based on input value
+      const filteredSongs = allSongs.filter((song) => {
+        return song.songName.toLowerCase().includes(value.toLowerCase())
+      })
+
+      // Update filtered songs in the store
+      if (filteredSongs.length === 0) {
+        dispatch(setFilteredSongs([]))
+      } else {
+        dispatch(setFilteredSongs(filteredSongs))
+      }
+    }
   }
 
+  // Handle form submission (prevent default behavior)
   const handleOnSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
-    event.preventDefault();
-    if (inputValue === '') {
-      dispatch(setSongs(songs));
-    }
-    else{
-
-      songList = songs;
-      const filteredSong = songList.filter(song => {
-        return song.songName.toLowerCase().includes(inputValue.toLowerCase());
-      });
-      dispatch(setSongs(filteredSong)); 
-    }
-  };
-  
+    event.preventDefault()
+  }
 
   return (
     <div className="MusicPlayerHeader">
@@ -40,16 +53,14 @@ const MusicPlayerNavbar = (): JSX.Element => {
       </div>
       <div className="HeaderWrapperTwo">
         <TrachNumberButton />
-        <form 
-          className="filterForm"
-          onSubmit={handleOnSubmit}
-        >
+        <form className="filterForm" onSubmit={handleOnSubmit}>
           <SearchIcon className="icon" />
-          <input 
-            type="text" 
+          <input
+            type="text"
             placeholder="Filter"
             value={inputValue}
-            onChange={handleOnChange} 
+            onChange={handleOnChange}
+            className="filter-input"
           />
         </form>
       </div>

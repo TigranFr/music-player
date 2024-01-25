@@ -1,80 +1,74 @@
-@import '../../variables.css';
+@import '../../../styles/variables.css';
 
 .song-row {
-    display: grid;
-    grid-template-columns: 5% 40% 30% 10% auto;
-    width: 100%;
-    gap: 3px;
-    align-items: center;
-    border-bottom: 1px solid var(--border-bottom);
-    transition: all 0.3s;
-  }
+  display: grid;
+  grid-template-columns: 5% 40% 30% 10% auto;
+  width: 100%;
+  gap: 3px;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-color-border);
+  transition: all 0.3s;
+}
 
- 
-  .song-row:hover {
-    background-color: var(--background-color); 
+.song-row:hover {
+  background-color: var(--gray-color-light);
+}
+
+.icons-block-one,
+.icons-block-two {
+  display: flex;
+  align-items: center;
+}
+
+.icons-block-one .icon,
+.icons-block-two .icon {
+  cursor: pointer;
+  fill: var(--gray-color-dark);
+}
+
+.song-row-item {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 4%;
+}
+
+.song-row-item p {
+  font-size: 20px;
+  word-break: break-all;
+}
+
+@media only screen and (max-width: 1024px) {
+  .song-row {
+    grid-template-columns: repeat(5, 1fr);
   }
-  
-  .icons-block-one,
-  .icons-block-two {
+  .song-row-item {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
-  
-  .icons-block-one .icon,
-  .icons-block-two .icon{
-    cursor: pointer;
-    fill: var(--icon-color);
-  }
+}
 
-
-  
-  .song-row-item {
-    text-overflow: ellipsis ;
-    overflow: hidden;
-    padding: 0 4%;
-  }
-  
+@media only screen and (max-width: 768px) {
   .song-row-item p {
-    font-size: 20px;
-    word-break: break-all;
+    font-size: 17px;
+    text-align: start;
   }
-  
-  @media only screen and (max-width:1024px){
-    .song-row{
-      grid-template-columns: repeat(5 , 1fr);
-    }
-    .song-row-item{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+}
+
+@media only screen and (max-width: 425px) {
+  .song-row-item p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
-
-  @media only screen and (max-width:768px){
-   
-    .song-row-item p{
-      font-size: 17px;
-      text-align: start;
-    }
-
+  .song-row-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  @media only screen and (max-width:425px){
-    .song-row-item p{
-      text-overflow: ellipsis ;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .song-row-item{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .icons-block-two .icon{
-      margin: 0 auto;
-      font-size: 15px;
-    }
+  .icons-block-two .icon {
+    margin: 0 auto;
+    font-size: 15px;
   }
-
+}

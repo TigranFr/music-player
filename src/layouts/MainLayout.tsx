@@ -1,4 +1,5 @@
 import React from 'react'
+import { ToastContainer } from 'react-toastify'
 import {
   MusicPlayerNavbar,
   SongListHeader,
@@ -7,14 +8,14 @@ import {
 } from '../components/views'
 import './MainLayout.css'
 
-const layout = ():JSX.Element => {
+const layout = (): JSX.Element => {
   return (
-    <div className='layout'>
+    <div className="layout">
       <MusicPlayerNavbar />
       <SongListHeader />
       <SongList />
       <MusicUploadForm />
-     
+      <ToastContainer />
     </div>
   )
 }

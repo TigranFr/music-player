@@ -1,15 +1,20 @@
 import React from 'react'
 import { useAppSelector } from '../../../hooks/reduxHooks'
-import { SongRow } from '../../shared'
+import { SongRow, NoData } from '../../shared'
 import './SongList.css'
 
 const SongList = (): JSX.Element => {
-  const songs = useAppSelector(state => state.songList.songs)
+  const songs = useAppSelector((state) => state.songList.songs)
+  const filteredSongs = useAppSelector((state) => state.songList.filteredSongs)
   return (
     <div className="songList">
-      {songs.length !== 0 ? songs.map((song, index) => (
-        <SongRow key={index} song={song} />
-      )) : <h1>No results</h1>}
+      {filteredSongs === null ? (
+        songs?.map((song, index) => <SongRow key={index} song={song} />)
+      ) : filteredSongs?.length === 0 ? (
+        <NoData />
+      ) : (
+        filteredSongs?.map((song, index) => <SongRow key={index} song={song} />)
+      )}
     </div>
   )
 }

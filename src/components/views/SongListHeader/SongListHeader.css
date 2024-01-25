@@ -1,39 +1,37 @@
-@import '../../variables.css';
+@import '../../../styles/variables.css';
 
 .song-list-header {
-    display: grid;
-    grid-template-columns: 5% 40% 30% 10% auto;
-    gap: 3px;
-    width: 100%;
-    margin-top: 20px;
-    border-bottom: 1px solid  var(--border-boto);
-  }
-  
-  .songListHeader-block{
-    background-color: var(--background-color);
-    padding: 0 4%;
-  }
+  display: grid;
+  grid-template-columns: 5% 40% 30% 10% auto;
+  gap: 3px;
+  width: 100%;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--gray-color-border);
+}
 
-  .songListHeader-block p{
-    font-weight: bold;
-    color: var(--main-color) ;
+.songListHeader-block {
+  background-color: var(--gray-color-light);
+  padding: 0 4%;
+}
+
+.songListHeader-block .songListHeader-block-item {
+  font-weight: bold;
+  color: var(--gray-color);
+}
+
+@media only screen and (max-width: 1024px) {
+  .song-list-header {
+    grid-template-columns: repeat(5, 1fr);
   }
-  
- @media only screen and (max-width:1024px){
-  .song-list-header{
-    grid-template-columns: repeat(5 , 1fr);
-  }
-  .songListHeader-block{
+  .songListHeader-block {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
- }
+}
 
- @media only screen and (max-width:768px){
-  .songListHeader-block{
+@media only screen and (max-width: 768px) {
+  .songListHeader-block {
     padding: 10px;
   }
- }
-  
+}

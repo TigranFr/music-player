@@ -1,0 +1,24 @@
+@import '../../../styles/variables.css';
+
+.no-result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.no-result-icon {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  fill: var(--gray-color-dark);
+}
+
+.no-result-text {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin: 0;
+}

@@ -1,14 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { type ISong } from '../../Interfaces/ISong'
-import songs from '../../utils/mockSongs';
-
+import songs from '../../utils/mockSongs'
 
 interface InitialState {
-    songs:ISong[];
+  songs: ISong[]
+  filteredSongs: ISong[] | null
 }
 
-const initialState:InitialState = {
-    songs:songs,
+const initialState: InitialState = {
+  songs: songs,
+  filteredSongs: null,
 }
 const songListSlice = createSlice({
   name: 'songList',
@@ -17,9 +18,14 @@ const songListSlice = createSlice({
     setSongs: (state, action) => {
       state.songs = action.payload
     },
-    // Add other song-related actions as needed
+    addSong: (state, action) => {
+      state.songs = [...state.songs, action.payload]
+    },
+    setFilteredSongs: (state, action) => {
+      state.filteredSongs = action.payload
+    },
   },
 })
 
-export const { setSongs } = songListSlice.actions
+export const { setSongs, addSong, setFilteredSongs } = songListSlice.actions
 export default songListSlice.reducer

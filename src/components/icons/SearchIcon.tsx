@@ -1,7 +1,7 @@
 import React from 'react'
 import { type IconProps } from '../../Interfaces/IIcon'
 
-const SearchIcon:React.FC<IconProps> = ({className}): JSX.Element => {
+const SearchIcon: React.FC<IconProps> = ({ className }): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

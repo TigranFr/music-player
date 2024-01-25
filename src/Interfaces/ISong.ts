@@ -1,6 +1,6 @@
 export interface ISong {
-    id:number
-    songName: string
-    artistName: string
-    trackNumber:number
+  id: number
+  songName: string
+  artistName: string
+  trackNumber: number
 }

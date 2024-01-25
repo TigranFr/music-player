@@ -1,19 +1,18 @@
 import React from 'react'
 import { type IconProps } from '../../Interfaces/IIcon'
 
-const ShareIcon :React.FC<IconProps>= ({ className }): JSX.Element => {
+const ShareIcon: React.FC<IconProps> = ({ className }): JSX.Element => {
+  interface IStyles {
+    transform: string
+    msFilter: string
+  }
 
-    interface IStyles {
-        transform: string
-        msFilter: string
-    }
+  const styles: IStyles = {
+    transform: 'scaleX(-1)',
+    msFilter:
+      'progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)',
+  }
 
-    const styles: IStyles = {
-        transform: 'scaleX(-1)',
-        msFilter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)'
-      };
-      
-      
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

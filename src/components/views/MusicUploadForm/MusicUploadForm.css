@@ -1,71 +1,45 @@
+@import '../../../styles/variables.css';
+
 .music-upload-form {
   width: 100%;
   border-radius: 5px;
   display: flex;
-  flex-direction: column; /* Display items vertically */
+  flex-direction: column;
   align-items: center;
   text-align: center;
   margin: 20px auto;
 }
 
-.file-input {
-  margin-bottom: 10px;
-  border-radius: 5px;
-  display: flex;
-}
-
-.file-input[type=file]::file-selector-button {
-  border: none;
-  outline: none;
-  padding: 14px;
-  border-radius: 5px;
-  margin-right: 10px;
-  background-color: rgb(217, 217, 217);
-  cursor: pointer;
-  transition: all 0.4s;
-}
-
-.file-input[type=file]::file-selector-button:hover {
-  background-color: rgb(185, 185, 185);
-}
-
-.selected-file {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
 .upload-button {
   padding: 14px;
-  background-color: rgb(111, 111, 111);
-  color: white;
+  background-color: var(--gray-color-dark);
+  color: var(--white-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s;
-  width: 100%; 
-  max-width: 200px; /* Optional: Limit the maximum width */
+  width: 100%;
+  max-width: 200px;
 }
 
 .upload-button:hover {
-  background-color: rgb(185, 185, 185);
+  background-color: var(--gray-color-hover);
 }
 
 .upload-button:disabled {
-  background-color: #ccc;
+  background-color: var(--gray-color-border);
   cursor: not-allowed;
 }
 
-  
-@media only screen and (max-width:768px){
-  .music-upload-form{
+@media only screen and (max-width: 768px) {
+  .music-upload-form {
     flex-direction: column;
   }
-  .file-input{
+  .file-input {
     border-radius: 3px;
     width: 100%;
   }
-  .upload-button{
+  .upload-button {
     width: 100%;
   }
-
 }

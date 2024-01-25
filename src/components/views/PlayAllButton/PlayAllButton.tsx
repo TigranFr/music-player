@@ -1,28 +1,20 @@
 import React from 'react'
-import { toast } from 'react-toastify'
+import showToast from '../../../utils/toast'
 import { PlayIcon } from '../../icons'
 import { CustomButton } from '../../shared'
 
 const PlayAllButton = (): JSX.Element => {
-
   const handleAddClick = (): void => {
-    toast.success('Successfully played, open console',{
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnFocusLoss: false,
-      pauseOnHover:false      
-    })
-    console.log('Successfully played');
+    showToast('Successfully played, open console')
+    console.log('Successfully played')
   }
 
   return (
-    <CustomButton 
-      title="Play All" 
-      startIcon={<PlayIcon className="icon" />} 
-      onClick={handleAddClick}
+    <CustomButton
+      title="Play All"
+      startIcon={<PlayIcon className="icon" />}
+      handleClick={handleAddClick}
     />
-
   )
 }
 

@@ -1,8 +1,7 @@
 import React from 'react'
-import {type IconProps} from '../../Interfaces/IIcon'
+import { type IconProps } from '../../Interfaces/IIcon'
 
-
-const SortIcon:React.FC<IconProps> = ({ className }): JSX.Element => {
+const SortIcon: React.FC<IconProps> = ({ className }): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

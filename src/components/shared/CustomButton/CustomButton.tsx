@@ -1,27 +1,26 @@
-import React from 'react';
-import { ArrowDownIcon } from '../../icons';
-import classNames from 'classnames';
-import './CustomButton.css';
+import React from 'react'
+import { ArrowDownIcon } from '../../icons'
+import classNames from 'classnames'
+import './CustomButton.css'
 
 interface CustomButtonProps {
-  startIcon?: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
-  title: string | number | null;
+  startIcon?: React.ReactNode
+  className?: string
+  handleClick?: () => void
+  title: string | number | null
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
   startIcon,
   className,
-  onClick,
+  handleClick,
   title,
 }) => {
-
-  const arrowClasses = classNames('arrow-down', className);
+  const arrowClasses = classNames('arrow-down', className)
 
   return (
-    <div className="custom-button-wrapper">
-      <button  className="custom-button" onClick={onClick}>
+    <div className="custom-button-wrapper" onClick={handleClick}>
+      <button className="custom-button">
         {startIcon !== null && <div className="start-icon">{startIcon}</div>}
         {title !== null && <p className="button-title">{title}</p>}
       </button>
@@ -29,7 +28,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         <ArrowDownIcon className="icon" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CustomButton;
+export default CustomButton

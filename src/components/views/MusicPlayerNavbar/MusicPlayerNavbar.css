@@ -1,77 +1,74 @@
-@import '../../variables';
+@import '../../../styles/variables.css';
 
-
-.MusicPlayerHeader{
+.MusicPlayerHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--background-color);
-  border: 1px solid var(--main-color);
+  background-color: var(--gray-color-light);
+  border: 1px solid var(--gray-color);
   border-radius: 5px;
   height: 60px;
   margin: 0 auto;
   width: 100%;
 }
 .HeaderWrapperOne,
-.HeaderWrapperTwo{
+.HeaderWrapperTwo {
   display: flex;
   align-items: center;
 }
 
-.filterForm{
+.filterForm {
   display: flex;
   align-items: center;
   justify-content: center;
   width: auto;
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--gray-color);
   border-radius: 50px;
   height: 40px;
   padding: 0 5px;
   margin: 0 10px;
-  background-color: white;
+  background-color: var(--white-color);
 }
 
-.filterForm input{
+.filterForm .filter-input {
   max-width: 250px;
   font-size: 20px;
   width: 100%;
   border: none;
   outline: none;
-  background-color: white;
+  background-color: var(--white-color);
 }
 
-.filterForm .icon{
-  fill: var(--icon-color);
+.filterForm .icon {
+  fill: var(--gray-color-dark);
 }
 
-
-@media only screen and (max-width:768px){
-  .MusicPlayerHeader{
+@media only screen and (max-width: 768px) {
+  .MusicPlayerHeader {
     height: auto;
   }
   .HeaderWrapperOne,
-  .HeaderWrapperTwo{
+  .HeaderWrapperTwo {
     width: 50%;
     margin: 10px;
     gap: 10px;
     flex-direction: column;
   }
 
-  .filterForm{
+  .filterForm {
     width: 80%;
     margin: 0 0 0 10px;
   }
-  .filterForm input{
+  .filterForm input {
     font-size: 16px;
   }
 }
 
-@media only screen and (max-width:430px){
-  .MusicPlayerHeader{
+@media only screen and (max-width: 430px) {
+  .MusicPlayerHeader {
     flex-direction: column;
   }
-  .filterForm{
+  .filterForm {
     width: 150%;
   }
 }
-
