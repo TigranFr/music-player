@@ -23,11 +23,11 @@
 }
 
 .upload-button:hover {
-  background-color: var(--gray-color-hover);
+  background-color: var(--gray-color-one);
 }
 
 .upload-button:disabled {
-  background-color: var(--gray-color-border);
+  background-color: var(--gray-color-two);
   cursor: not-allowed;
 }
 

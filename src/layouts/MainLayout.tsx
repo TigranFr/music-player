@@ -8,7 +8,7 @@ import {
 } from '../components/views'
 import './MainLayout.css'
 
-const layout = (): JSX.Element => {
+const MainLayout = (): JSX.Element => {
   return (
     <div className="layout">
       <MusicPlayerNavbar />
@@ -20,4 +20,4 @@ const layout = (): JSX.Element => {
   )
 }
 
-export default layout
+export default MainLayout

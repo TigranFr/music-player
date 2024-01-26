@@ -5,7 +5,6 @@ import '@testing-library/jest-dom/extend-expect'
 import PlayAllButton from './PlayAllButton'
 import { toast } from 'react-toastify'
 
-// Mock react-toastify to avoid actual toasts during testing
 jest.mock('react-toastify', () => ({
   toast: jest.fn(),
 }))
@@ -14,26 +13,21 @@ describe('PlayAllButton Component', () => {
   test('renders component with title', () => {
     render(<PlayAllButton />)
 
-    // Check if the button title is present
     expect(screen.getByText('Play All')).toBeInTheDocument()
   })
 
   test('calls handleAddClick on button click', () => {
     render(<PlayAllButton />)
 
-    // Mock console.log
     const consoleLogMock = jest
       .spyOn(console, 'log')
       .mockImplementation(() => {})
 
-    // Click the button
     fireEvent.click(screen.getByText('Play All'))
 
-    // Check if console.log and toast are called with the correct messages
     expect(consoleLogMock).toHaveBeenCalledWith('Successfully played')
     expect(toast).toHaveBeenCalledWith('Successfully played, open console')
 
-    // Restore the original console.log function
     consoleLogMock.mockRestore()
   })
 })

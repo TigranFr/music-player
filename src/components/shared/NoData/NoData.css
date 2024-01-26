@@ -18,7 +18,7 @@
 
 .no-result-text {
   font-size: 18px;
-  color: #555;
+  color: var(--gray-color);
   text-align: center;
   margin: 0;
 }

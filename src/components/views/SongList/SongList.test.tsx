@@ -2,18 +2,14 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { Provider } from 'react-redux' // Assuming you use a Redux store
+import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
 import SongList from './SongList'
 
-// Mock the Redux store
 const mockStore = configureStore([])
 
-// Test Suite for SongList
 describe('SongList Component', () => {
-  // Test Case 1: Renders the component with songs
   test('renders component with songs', () => {
-    // Mock the Redux store state with some songs
     const initialState = {
       songList: {
         songs: [
@@ -31,7 +27,6 @@ describe('SongList Component', () => {
       </Provider>
     )
 
-    // Check if the rendered component contains the expected song details
     expect(screen.getByText('Song 1')).toBeInTheDocument()
     expect(screen.getByText('Artist 1')).toBeInTheDocument()
     expect(screen.getByText('Song 2')).toBeInTheDocument()

@@ -28,7 +28,10 @@ const MusicPlayerNavbar = (): JSX.Element => {
     } else {
       // Filter songs based on input value
       const filteredSongs = allSongs.filter((song) => {
-        return song.songName.toLowerCase().includes(value.toLowerCase())
+        return (
+          song.songName.toLowerCase().includes(value.toLowerCase()) ||
+          song.artistName.toLowerCase().includes(value.toLocaleLowerCase())
+        )
       })
 
       // Update filtered songs in the store
@@ -40,11 +43,6 @@ const MusicPlayerNavbar = (): JSX.Element => {
     }
   }
 
-  // Handle form submission (prevent default behavior)
-  const handleOnSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
-    event.preventDefault()
-  }
-
   return (
     <div className="MusicPlayerHeader">
       <div className="HeaderWrapperOne">
@@ -53,7 +51,7 @@ const MusicPlayerNavbar = (): JSX.Element => {
       </div>
       <div className="HeaderWrapperTwo">
         <TrachNumberButton />
-        <form className="filterForm" onSubmit={handleOnSubmit}>
+        <div className="filterForm">
           <SearchIcon className="icon" />
           <input
             type="text"
@@ -62,7 +60,7 @@ const MusicPlayerNavbar = (): JSX.Element => {
             onChange={handleOnChange}
             className="filter-input"
           />
-        </form>
+        </div>
       </div>
     </div>
   )

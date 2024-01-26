@@ -19,7 +19,6 @@ describe('TruckNumberButton Component', () => {
   test('renders component with title', () => {
     render(<TruckNumberButton />)
 
-    // Check if the button title is present
     expect(screen.getByText('Truck Number')).toBeInTheDocument()
   })
 })

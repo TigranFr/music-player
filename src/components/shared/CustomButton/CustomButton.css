@@ -17,7 +17,7 @@
 }
 
 .custom-button-wrapper:hover {
-  background-color: var(--gray-color-hover);
+  background-color: var(--gray-color-one);
 }
 
 .custom-button-wrapper:active {
@@ -39,7 +39,7 @@
 }
 
 .custom-button-wrapper .arrow-down:hover {
-  background-color: var(--gray-color-hover);
+  background-color: var(--gray-color-one);
 }
 
 .custom-button-wrapper .arrow-down .icon {
@@ -66,7 +66,7 @@
 }
 
 .custom-button-wrapper .custom-button:hover {
-  background-color: var(--gray-color-hover);
+  background-color: var(--gray-color-one);
 }
 
 .custom-button-wrapper .custom-button .button-title {
