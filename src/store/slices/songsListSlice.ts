@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { type ISong } from '../../Interfaces/ISong'
+import { type Song } from '../../Interfaces/Song'
 import songs from '../../utils/mockSongs'
 
 interface InitialState {
-  songs: ISong[]
-  filteredSongs: ISong[] | null
+  songs: Song[]
+  filteredSongs: Song[] | null
 }
 
 const initialState: InitialState = {

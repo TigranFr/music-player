@@ -12,17 +12,14 @@ const MusicUploadForm: React.FC = () => {
   const [uploadProgress, setUploadProgress] = useState<number>(0)
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const fakeData = useAppSelector((state) => state.fetchedSong.song)
-  console.log(fakeData)
+  // Access Redux dispatch and selector hooks
+  const dispatch = useAppDispatch()
+  const songs = useAppSelector((state) => state.songList.songs)
 
   // Function to handle file change event
   const handleFileChange = (file: File): void => {
     setSelectedFile(file)
   }
-
-  // Access Redux dispatch and selector hooks
-  const dispatch = useAppDispatch()
-  const songs = useAppSelector((state) => state.songList.songs)
 
   // Function to handle the upload process
   const handleUpload = (): void => {

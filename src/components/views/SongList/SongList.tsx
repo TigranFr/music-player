@@ -1,5 +1,6 @@
 import React from 'react'
 import { useAppSelector } from '../../../hooks/reduxHooks'
+import { type Song } from '../../../Interfaces/Song'
 import { SongRow, NoData } from '../../shared'
 import './SongList.css'
 
@@ -9,7 +10,9 @@ const SongList = (): JSX.Element => {
   return (
     <div className="songList">
       {filteredSongs === null ? (
-        songs?.map((song, index) => <SongRow key={index} song={song} />)
+        songs?.map((song: Song, index: React.Key | null | undefined) => (
+          <SongRow key={index} song={song} />
+        ))
       ) : filteredSongs?.length === 0 ? (
         <NoData />
       ) : (

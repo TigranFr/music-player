@@ -1,6 +1,6 @@
-import { type ISong } from '../Interfaces/ISong'
+import { type Song } from '../Interfaces/Song'
 
-const songs: ISong[] = [
+const songs: Song[] = [
   {
     id: 1,
     songName: 'Halo',

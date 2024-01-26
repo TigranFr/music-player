@@ -1,6 +1,6 @@
-import { type ISong } from '../Interfaces/ISong'
+import { type Song } from '../Interfaces/Song'
 
-const generateFateResponse = (): ISong => {
+const generateFakeResponse = (): Song => {
   const fakeResponse = {
     id: Date.now(),
     songName: 'Fake song',
@@ -10,4 +10,4 @@ const generateFateResponse = (): ISong => {
   return fakeResponse
 }
 
-export default generateFateResponse
+export default generateFakeResponse

@@ -1,5 +1,5 @@
 import React from 'react'
-import { type IconProps } from '../../Interfaces/IIcon'
+import { type IconProps } from '../../Interfaces/Icon'
 
 const PlayIcon: React.FC<IconProps> = ({ className }): JSX.Element => {
   return (

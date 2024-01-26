@@ -12,7 +12,6 @@ const mockSong = {
 }
 
 describe('SongRow Component', () => {
-
   test('renders component with song details', () => {
     render(<SongRow song={mockSong} />)
 

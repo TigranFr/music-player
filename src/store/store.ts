@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import songsListSlice from './slices/songsListSlice'
-import fetchedSongsSlice from './slices/fetchedSongsSlice'
+import fetchedSongSlice from './slices/fetchedSongSlice'
 import {
   persistStore,
   persistReducer,
@@ -20,7 +20,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   songList: songsListSlice,
-  fetchedSong: fetchedSongsSlice,
+  fetchedSong: fetchedSongSlice,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

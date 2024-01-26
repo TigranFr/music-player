@@ -1,5 +1,5 @@
 import React from 'react'
-import { type ISong } from '../../../Interfaces/ISong'
+import { type Song } from '../../../Interfaces/Song'
 import './SongRow.css'
 import {
   ArrowDownIcon,
@@ -11,7 +11,7 @@ import {
 } from '../../icons'
 
 interface SongRowProps {
-  song: ISong
+  song: Song
 }
 
 const SongRow = ({ song }: SongRowProps): JSX.Element => {
