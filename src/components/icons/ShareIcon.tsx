@@ -1,12 +1,14 @@
 import React from 'react'
 import { type IconProps } from '../../Interfaces/IIcon'
 
-const ShareIcon: React.FC<IconProps> = ({ className }): JSX.Element => {
-  interface IStyles {
-    transform: string
-    msFilter: string
-  }
+interface IStyles {
+  transform: string
+  msFilter: string
+}
 
+
+const ShareIcon: React.FC<IconProps> = ({ className }): JSX.Element => {
+  
   const styles: IStyles = {
     transform: 'scaleX(-1)',
     msFilter:

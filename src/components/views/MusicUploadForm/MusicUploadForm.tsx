@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Loader, Modal } from '../../shared/index'
+import { Loader } from '../../shared/index'
 import DragOrDrop from '../DragOrDrop/DragOrDrop'
 import './MusicUploadForm.css'
 import { useAppDispatch, useAppSelector } from '../../../hooks/reduxHooks'
@@ -11,15 +11,6 @@ const MusicUploadForm: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const [uploadProgress, setUploadProgress] = useState<number>(0)
   const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
-
-  const openModal = (): void => {
-    setIsModalOpen(true)
-  }
-
-  const closeModal = (): void => {
-    setIsModalOpen(false)
-  }
 
   const fakeData = useAppSelector((state) => state.fetchedSong.song)
   console.log(fakeData)
@@ -37,7 +28,6 @@ const MusicUploadForm: React.FC = () => {
   const handleUpload = (): void => {
     setIsLoading(true)
     simulateUpload(10)
-    openModal()
   }
 
   // Simulate a file upload process with a mock progress indicator
@@ -80,7 +70,7 @@ const MusicUploadForm: React.FC = () => {
   }
 
   // Handle upload errors
-  const handleUploadError = (error: unknown): void => {
+  const handleUploadError = (error: any): void => {
     console.error('Upload failed:', error)
 
     // Reset state and show error message to the user
@@ -95,13 +85,9 @@ const MusicUploadForm: React.FC = () => {
     <div className="music-upload-form">
       <DragOrDrop onFileChange={handleFileChange} />
 
-      {isLoading && isModalOpen ? (
-        <Modal onClose={closeModal}>
-          <Loader />
-        </Modal>
-      ) : null}
-
-      {!isLoading && (
+      {isLoading ? (
+        <Loader />
+      ) : (
         <button
           className="upload-button"
           onClick={handleUpload}
